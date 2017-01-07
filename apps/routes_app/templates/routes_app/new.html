@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new</title>
+</head>
+<body>
+
+<h1>Add a new product</h1>
+
+<form action="/create" method="post">
+{% csrf_token %}
+	<label>Name:
+		<input type="text" name="name">
+	</label>
+	<label>Description:
+		<input type="text" name="description">
+	</label>
+	<label>Price:
+		<input type="text" name="price">
+	</label>
+	<input type="submit" name="submit" value="Create">
+</form>
+
+<a href="/">Go Back</a>
+</body>
+</html>
